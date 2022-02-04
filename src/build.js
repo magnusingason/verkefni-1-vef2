@@ -1,12 +1,11 @@
 import {join} from 'path';
-import {writeFile, readFile, readdir, stat} from 'fs/promises';
+import {mkdir, writeFile, readFile, readdir, stat} from 'fs/promises';
 
 import graymatter from 'gray-matter';
 import {marked} from 'marked';
 
 import {dataTemplate, makeHTML, makeScript} from './make-html.js';
 import {parse} from './parser.js';
-import { mkdir } from 'fs';
 
 const DATA_DIR = './data';
 const OUTPUT_DIR = './dist';
