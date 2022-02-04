@@ -65,7 +65,7 @@ async function main() {
     const template = dataTemplate(dataInfo, number);
     const newfile = join(OUTPUT_DIR, `index.html`);
     
-    await writeFile(newfile, template);
+    await writeFile(newfile, template, { flag: 'w+' });
 }
 
 main().catch((err) => console.error(err));
