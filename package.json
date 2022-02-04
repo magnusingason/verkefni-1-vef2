@@ -1,0 +1,28 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./src/build.js && cpy public dist",
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest ./*.test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.8.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.4.7",
+    "stylelint": "^14.3.0",
+    "stylelint-config-standard": "^24.0.0"
+  },
+  "dependencies": {
+    "compute-variance": "^3.0.0",
+    "cpy-cli": "^3.1.1",
+    "cross-env": "^7.0.3",
+    "gray-matter": "^4.0.3",
+    "marked": "^4.0.12"
+  }
+}

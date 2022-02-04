@@ -1,0 +1,2 @@
+{"C:\\Users\\fjala\\Documents\\vefforitun 2\\hw 1\\src\\parser.js": {"path":"C:\\Users\\fjala\\Documents\\vefforitun 2\\hw 1\\src\\parser.js","statementMap":{"0":{"start":{"line":2,"column":4},"end":{"line":2,"column":34}}},"fnMap":{"0":{"name":"parse","decl":{"start":{"line":1,"column":16},"end":{"line":1,"column":21}},"loc":{"start":{"line":1,"column":28},"end":{"line":3,"column":1}},"line":1}},"branchMap":{},"s":{"0":1},"f":{"0":1},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"b96d12ad2fa26752373be7f74e67ea65ee28bfdc"}
+}
