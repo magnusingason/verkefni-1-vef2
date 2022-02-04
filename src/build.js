@@ -36,18 +36,13 @@ async function main() {
         var number = splitted[splitted.length-2];
         const path = join (DATA_DIR, file);
         const info = await stat(path);
-        //console.log('object :>> ', path);
-        //console.log('info :>> ', info.isDirectory());
         if(info.isDirectory()){
             continue;
         }
         const data = await readFile(path);
-        //console.log('data :>> ', data);
         const str = data.toString('utf-8');
-        //console.log('str :>> ', str);
 
         const parsed = parse(str);
-        //console.log('parsed :>> ', parsed);
 
         var splitting = parsed.split("\n");
         
@@ -57,33 +52,20 @@ async function main() {
         
         splitting.pop();
 
-        console.log(splitting);
 
         const html = makeHTML(splitting, number);
-        //console.log('html :>> ', html);
         
         dataInfo = dataInfo.concat(html);
 
         const scripts = makeScript(number, splitting);
 
         dataInfo = dataInfo.concat(scripts);
-        //console.log(dataInfo);
-        /*
-        const template = dataTemplate(html, number);
-        //console.log('data :>> ', template);
-        const newfile = join(OUTPUT_DIR, `${number}.html`);
-        
-        await writeFile(newfile, template);
-        */
     }
-    //console.log(dataInfo);
 
     const template = dataTemplate(dataInfo, number);
-    //console.log('data :>> ', template);
     const newfile = join(OUTPUT_DIR, `index.html`);
     
     await writeFile(newfile, template);
-    //consts index = makeIndex(dataInfo);
 }
 
 main().catch((err) => console.error(err));
